@@ -5,18 +5,12 @@ function setup () {
 
 function draw () {
   background(69, 97, 174);
-  fill(76, 174, 69);
-  noStroke();
-  var diameter = 50;
 
-  for (var x = 0; x < width / diameter; x = x + 1) {
-    for (var y = 0; y < height / diameter; y = y + 1) {
-      ellipse(
-        diameter / 2 + x * diameter,
-        diameter / 2 + y * diameter,
-        diameter,
-        diameter
-      );
+  for (var x = 50; x <= width; x += 20) {
+    for (var y = 50; y <= height; y += 20) {
+      stroke(random(255));
+      strokeWeight(2);
+      line(x + 10, y + 20, width / 4, height / 2);
     }
   }
 }
